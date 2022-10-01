@@ -1,0 +1,9 @@
+<app-users-form></app-users-form>
+<div class="user" *ngFor="let user of usersList">
+  <div class="card-users">
+    <h5 class="card-title">{{user.nom}} {{user.prenom}}</h5>
+    <p class="card-text">Email : {{user.email}}</p>
+    <p class="card-text">Telephone : {{user.telephone}}</p>
+    <p class="card-text">Date de naissance: {{user.date_naissance | date: 'shortDate'}}</p>
+  </div>
+</div>

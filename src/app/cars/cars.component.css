@@ -1,0 +1,10 @@
+.card-cars {
+  background-color: blue;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+  width: 80%;
+  margin: 3%;
+  padding-top: 1%;
+  color: azure;
+}
