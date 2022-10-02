@@ -16,6 +16,13 @@ export class UsersComponent implements OnInit {
   constructor(private userService: UsersService) { }
 
   ngOnInit(): void {
-    this.userService.getUsers().subscribe((usersList) => (this.usersList = usersList))
+    this.userService.getUsers().subscribe((usersList) => (this.usersList = usersList, console.log(usersList)
+    ))
+
+    
+  }
+
+  delete(user: User){
+    this.userService.deleteUserById(user.id!).subscribe();
   }
 }

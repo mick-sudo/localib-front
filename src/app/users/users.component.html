@@ -5,5 +5,8 @@
     <p class="card-text">Email : {{user.email}}</p>
     <p class="card-text">Telephone : {{user.telephone}}</p>
     <p class="card-text">Date de naissance: {{user.date_naissance | date: 'shortDate'}}</p>
+    <div class="action-buttons">
+      <button type="submit" (click)="delete(user)">Supprimer</button>
+    </div>
   </div>
 </div>

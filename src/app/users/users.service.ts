@@ -29,4 +29,7 @@ export class UsersService {
     return this.http.post<User>(`http://localhost:3000/users`, formValue, this.httpOptions)
   }
 
+  deleteUserById(userId: number){
+    return this.http.delete(`http://localhost:3000/users/${userId}`)
+  }
 }
