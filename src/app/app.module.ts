@@ -11,6 +11,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { UsersFormComponent } from './users-form/users-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LocationComponent } from './location/location.component';
+import { CarsFormComponent } from './cars-form/cars-form.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LocationComponent } from './location/location.component';
     CarsComponent,
     NavbarComponent,
     UsersFormComponent,
-    LocationComponent
+    LocationComponent,
+    CarsFormComponent
   ],
   imports: [
     BrowserModule,

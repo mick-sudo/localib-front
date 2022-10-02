@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, of, tap } from 'rxjs';
 import { Car } from './car';
@@ -8,18 +8,18 @@ import { Car } from './car';
 })
 export class CarsService {
 
-  BASE_URL: string = 'http://localhost:3000';
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-type': 'application/json' })
+  };
+
 
   constructor(private http: HttpClient) { }
 
   getCars(): Observable<Car[]> {
-    return this.http.get<Car[]>('http://localhost:3000/cars').pipe(
-      tap((response: any) => console.table(response)), // s'il y a une réponse, on log la réponse
-      catchError((error) => {
-        console.log(error); // s'il y a une erreur on log l'erreur
-        return of([]) // et on renvoit un tableau vide
+    return this.http.get<Car[]>('http://localhost:3000/cars')
+  }
 
-      })
-    )
+  addCars(formValue:{marque: string, modele: string, immatriculation: string, prix: number, etat: string, type: string }){
+    return this.http.post<Car>(`http://localhost:3000/cars`, formValue, this.httpOptions)
   }
 }
