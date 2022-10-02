@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { User } from './user';
 import { UsersService } from './users.service';
 
@@ -17,5 +18,4 @@ export class UsersComponent implements OnInit {
   ngOnInit(): void {
     this.userService.getUsers().subscribe((usersList) => (this.usersList = usersList))
   }
-
 }

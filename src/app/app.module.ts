@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { UsersFormComponent } from './users-form/users-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LocationComponent } from './location/location.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     UsersComponent,
     CarsComponent,
     NavbarComponent,
-    UsersFormComponent
+    UsersFormComponent,
+    LocationComponent
   ],
   imports: [
     BrowserModule,
